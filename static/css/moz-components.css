@@ -1,0 +1,177 @@
+
+@keyframes nodeInserted {  
+	from {  
+		clip: rect(1px, auto, auto, auto); 
+	}
+	to {  
+		clip: rect(0px, auto, auto, auto);
+	}
+}
+
+@-moz-keyframes nodeInserted {  
+	from {  
+		clip: rect(1px, auto, auto, auto); 
+	}
+	to {  
+		clip: rect(0px, auto, auto, auto);
+	}
+}
+
+@-webkit-keyframes nodeInserted {  
+	from {  
+		clip: rect(1px, auto, auto, auto); 
+	}
+	to {
+		clip: rect(0px, auto, auto, auto);
+	}
+}
+
+moz\:tabbox, moz\:tabs, moz\:tab, moz\:panels, moz\:panel, moz\:accordion, moz\:toggler, moz\:tree {
+	animation-duration: 0.001s;
+    animation-name: nodeInserted;
+	-ms-animation-duration: 0.001s;
+    -ms-animation-name: nodeInserted;
+	-moz-animation-duration: 0.001s;
+    -moz-animation-name: nodeInserted;
+	-webkit-animation-duration: 0.001s;
+    -webkit-animation-name: nodeInserted;
+}
+
+/* BOX DISPLAY ELEMENTS */
+
+	moz\:tabbox, moz\:tabs, moz\:tab, moz\:panels, moz\:panel, moz\:accordion, moz\:toggler  {
+		display: box;
+		display: -ms-box;
+		display: -moz-box;
+		display: -webkit-box;
+	}
+
+/* VERTICAL ORIENT ELEMENTS */
+
+	moz\:tabbox, moz\:panels, moz\:panel, moz\:accordion {
+		box-orient: vertical;
+		-ms-box-orient: vertical;
+		-moz-box-orient: vertical;
+		-webkit-box-orient: vertical;
+	}
+
+	
+/* HORIZONTAL ORIENT ELEMENTS */
+
+	moz\:tabs {
+		
+	}
+
+/* BOX FLEX 0 ELEMENTS */
+
+	moz\:tabs, moz\:tab, moz\:panels {
+		box-flex: 0;
+		-ms-box-flex: 0;
+		-moz-box-flex: 0;
+		-webkit-box-flex: 0;
+	}
+
+	
+/* BOX FLEX 1 ELEMENTS */
+
+	moz\:foo {
+		box-flex: 1;
+		-ms-box-flex: 1;
+		-moz-box-flex: 1;
+		-webkit-box-flex: 1;
+	}
+
+	
+/* TABBOX */
+	
+	moz\:tabs {
+		
+	}
+	
+	moz\:tab {
+		cursor: default;
+	}
+
+	moz\:tab[selected="true"] {
+		text-decoration: underline;
+	}
+
+	moz\:tabbox moz\:panel {
+		display: none;
+	}
+
+	moz\:tabbox moz\:panel[selected="true"] {
+		display: box;
+		display: -ms-box;
+		display: -moz-box;
+		display: -webkit-box;
+	}
+
+	moz\:tabbox[tab-orient="left"], moz\:tabbox[tab-orient="right"] {
+		box-orient: horizontal;
+		-ms-box-orient: horizontal;
+		-moz-box-orient: horizontal;
+		-webkit-box-orient: horizontal;
+	}
+	
+	moz\:tabbox[tab-orient="bottom"] {
+		box-direction: reverse;
+		-ms-box-direction: reverse;
+		-moz-box-direction: reverse;
+		-webkit-box-direction: reverse;
+	}
+	
+	moz\:tabbox[tab-orient="left"] moz\:tabs,
+	moz\:tabbox[tab-orient="right"] moz\:tabs,
+	moz\:tabbox[tab-orient="left"] moz\:panels,
+	moz\:tabbox[tab-orient="right"] moz\:panels {
+		box-flex: 1;
+		-ms-box-flex: 1;
+		-moz-box-flex: 1;
+		-webkit-box-flex: 1;
+		box-orient: vertical;
+		-ms-box-orient: vertical;
+		-moz-box-orient: vertical;
+		-webkit-box-orient: vertical;
+	}
+	
+	moz\:tabbox[tab-orient="right"] {
+		box-direction: reverse;
+		-ms-box-direction: reverse;
+		-moz-box-direction: reverse;
+		-webkit-box-direction: reverse;
+	}
+	
+/* ACCORDION */
+	
+	moz\:toggler {
+		cursor: default;
+	}
+
+	moz\:toggler[selected="true"] {
+		text-decoration: underline;
+	}
+
+	moz\:accordion moz\:panel {
+		display: none;
+	}
+
+	moz\:toggler[selected="true"] + moz\:panel {
+		display: -moz-box;
+	}
+
+/* SLIDEBOX */
+	
+	moz\:slidebox {
+		cursor: default;
+	}
+	
+	moz\:slidebox moz\:panel {
+		display: none;
+	}
+	
+	moz\:slidebox moz\:panel[selected="true"] {
+		
+	}
+	
+	
